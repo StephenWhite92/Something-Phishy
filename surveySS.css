@@ -1,0 +1,43 @@
+body {
+    background-color: #F1B82D;
+    align-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+    margin: auto;
+    display: block;
+    text-align: center;
+    padding-top: 15px;
+}
+
+form {
+    display: block;
+    padding: 15px;
+    margin: auto;
+    width: 90%;
+    text-align:center;
+}
+
+textarea {
+    width: 90%;
+    height: 120px;
+}
+
+#surveySubmit {
+    background-color: black;
+    color: #F1B82D;
+    border: none;
+    border-radius: 10px;
+    padding: 16px 20px;
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    align-content: center;
+    margin: auto;
+}
+
+.required:after {
+    content:" *";
+    color: red;
+  }
