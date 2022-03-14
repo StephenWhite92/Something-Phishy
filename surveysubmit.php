@@ -21,6 +21,7 @@
             // Insert statement
             $sql = "INSERT INTO surveydata (age, gender, email, feedback) VALUES (?, ?, ?, ?)";
             
+            // Prepare insert statement
             if($statement = mysqli_prepare($mysqli, $sql)){
                 mysqli_stmt_bind_param($statement, "isss", $age, $gender, $email, $feedback);
             
@@ -30,6 +31,7 @@
                 $email = $_REQUEST['email'];
                 $feedback = $_REQUEST['feedback'];
                 
+                // Execute prepared insert statement
                 if(mysqli_stmt_execute($statement)){
                     echo "Thank you for submitting your information. Winners of the Giftcard will be chosen by 5/9/22";
                 } else{
