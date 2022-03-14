@@ -31,6 +31,13 @@
                 $email = $_REQUEST['email'];
                 $feedback = $_REQUEST['feedback'];
                 
+                // Duplicate email check
+                $dupcheck = mysqli_query($mysqli, "SELECT * FROM surveydata WHERE email='$email'");
+                if(mysqli_num_rows($dupcheck) > 0){
+                    echo "Duplicate email, please submit unique email address!";
+                    exit();
+                }
+                    
                 // Execute prepared insert statement
                 if(mysqli_stmt_execute($statement)){
                     echo "Thank you for submitting your information. Winners of the Giftcard will be chosen by 5/9/22";
