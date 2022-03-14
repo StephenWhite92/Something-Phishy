@@ -34,13 +34,13 @@
                 // Duplicate email check
                 $dupcheck = mysqli_query($mysqli, "SELECT * FROM surveydata WHERE email='$email'");
                 if(mysqli_num_rows($dupcheck) > 0){
-                    echo "Duplicate email, please submit unique email address!";
+                    echo "<p class='echo'>Email already submitted, please submit a unique email address!</p>";
                     exit();
                 }
                     
                 // Execute prepared insert statement
                 if(mysqli_stmt_execute($statement)){
-                    echo "Thank you for submitting your information. Winners of the Giftcard will be chosen by 5/9/22";
+                    echo "<p class='echo'>Thank you for submitting your information. Winners of the Giftcard will be chosen by 5/9/22</p>";
                 } else{
                     echo "There was an error submitting your information: $sql." . mysqli_error($mysqli);
                 }
