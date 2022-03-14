@@ -6,19 +6,9 @@
     </head>
 
     <body>
-        <?php include '/etc/capstone/database.php';
-        // DB connection
-        $mysqli = new mysqli($HOST,$USER,$DB_PSWD,$DB_NAME);
-
-        // Check connection
-        if ($mysqli -> connect_errno) {
-          echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
-          exit();
-        }
-        ?> 
         <section class="survey-body">
             <h1>Website Survey</h1>
-            <form name="submitForm" action="/thankYou.html" method="post" required>
+            <form name="submitForm" action="surveysubmit.php" method="post" required>
                 <label class="required" for="age">Please enter your age:</label></br>
                 <input type="number" id="age" name="age" min="13" max="150" required></br></br>
                 <label class="required" for="gender">Select your gender:</label></br>
