@@ -19,7 +19,7 @@
             }
             
             // Insert statement
-            $sql = "INSERT INTO surveydata (age, gender, email, feedback) VALUES (?, ?, AES_ENCRYPT('?', 'test'), ?)";
+            $sql = "INSERT INTO surveydata (age, gender, email, feedback) VALUES (?, ?, ?, ?)";
             
             // Prepare insert statement
             if($statement = mysqli_prepare($mysqli, $sql)){
