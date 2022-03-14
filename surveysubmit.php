@@ -21,7 +21,7 @@
             // Insert statement
             $sql = "INSERT INTO surveydata (age, gender, email, feedback) VALUES (?, ?, ?, ?)";
             
-            if($statement = mysqli_prepare($sql)){
+            if($statement = mysqli_prepare($mysqli, $sql)){
                 mysqli_stmt_bind_param($statement, "isss", $age, $gender, $email, $feedback);
             
                 // Form parameters
