@@ -16,11 +16,12 @@
             if ($mysqli -> connect_errno) {
               echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
               exit();
-                    
+            }
+            
             // Insert statement
             $sql = "INSERT INTO surveydata (age, gender, email, feedback) VALUES (?, ?, ?, ?)";
             
-            if($statement = mysqli_prepare($sql){
+            if($statement = mysqli_prepare($sql)){
                 mysqli_stmt_bind_param($statement, "isss", $age, $gender, $email, $feedback);
             
                 // Form parameters
@@ -30,10 +31,13 @@
                 $feedback = $_REQUEST['feedback'];
                 
                 if(mysqli_stmt_execute($statement)){
-                    echo "Thank you for submitting your information. Winners of the Giftcard will be chosen by 5/9/22"
+                    echo "Thank you for submitting your information. Winners of the Giftcard will be chosen by 5/9/22";
                 } else{
                     echo "There was an error submitting your information: $sql." . mysqli_error($mysqli);
                 }
+            } else{
+                echo "There was an error preparing your information: $sql. " . mysqli_error($mysqli);
+            }
             mysqli_stmt_close($statement);
             mysqli_close($mysqli);
             ?> 
