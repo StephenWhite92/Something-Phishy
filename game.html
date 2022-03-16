@@ -1,1 +1,77 @@
+<!--
+Something Phishy
+Capstone IT4970
+2/27/22
+-->
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .container > div{
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .column {
+        float: left;
+        width: 40%;
+        padding-top: 30px;
+        padding-right: 50px;
+        padding-left: 50px;
+    }
 
+    /* Clearfix (clear floats) */
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+</style>
+<head>
+    <link rel="stylesheet" href="indexSS.css">
+    <title>QR Code Game</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+   
+<body>
+    <div class="container">       
+        <h1 id="instructions" class="contents">
+            <p>We will present you with 2 images. 
+                 Click on the image of the QR code that is safer to scan.
+            </p>
+            <button id="continue" class="button contents" onclick="ShowDiv()">
+                Continue
+            </button>
+        </h1>
+        <div class="contents">
+            <div id="displayImages" style="display:none" class="contents row">
+                <div>Choose the right Q.R. Code.</div>
+                <div id="imgRight" class="column">
+                    <img src="qr-code.png">
+                </div>
+                <div id="imgWrong" class="column">
+                    <img src="qr-code.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var questionOne = document.getElementById("displayImages");
+        var contButton = document.getElementById("continue");
+        function ShowDiv() {
+          questionOne.style.display = "block";
+          document.getElementById("instructions").style.display = "none";
+          contButton.style.display = "none";
+        }
+        document.getElementById('imgRight').onclick = function() {
+            questionOne.innerHTML = "<h1>Great Job</h1><p>A flyer with a URL on it indicates that the QR code is more trustworthy. To be extra safe, type inthe URL instead!";    
+                
+        }
+        document.getElementById("imgWrong").onclick = function() {
+            questionOne.innerHTML = "<h1>Oh No!</h1><p>You might have just infected your phone! Never trust a QR code that doesn't have a URL posted with it on a random flyer in a public place."
+        }
+    </script>
+</body>
+</html>
