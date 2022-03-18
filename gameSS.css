@@ -1,0 +1,91 @@
+body {
+    background-color: #F1B82D;
+    align-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.grid {
+    width: 55%;
+    height: 75%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 10px 50px 50px 50px;
+    border-radius: 50px;
+    border: 2px solid black;
+}
+
+.buttons img {
+    width: 300px;
+}
+
+.grid h1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #ffc107;
+    font-size: 35px;
+    text-align: center;
+    color: black;
+    padding: 2px 0px;
+    border-radius: 50px;
+}
+
+hr {
+    margin-top: 50px;
+    color: red;
+    background-color: #ffc107;
+    height: 2px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+#score {
+    color: black;
+    text-align: center;
+    font-size: 30px;
+}
+
+.grid #question {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 30px;
+    color: black;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+#btn0,
+#btn1 {
+    padding: 0px;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    margin: 10px 20px 10px 0px;
+
+}
+
+#btn0:hover,
+#btn1:hover {
+    cursor: pointer;
+    background-color: #ffc107;
+}
+
+#btn0:focus,
+#btn1:focus {
+    outline: 0;
+}
+
+#progress {
+    color: black;
+    font-size: 18px;
+}
+.MUimage {
+    max-width: 100%;
+    max-height: auto;
+}
