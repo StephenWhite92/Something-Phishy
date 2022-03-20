@@ -8,7 +8,6 @@
     <title>QR Interactive Game</title>
     <link rel="stylesheet" href="gameSS.css">
 </head>
-
 <body>
     <div class="grid">
         <img src="images/MUstacked.png" class="MUimage">
@@ -20,13 +19,28 @@
                 <button id="btn0"><span id="choice0"></span></button>
                 <button id="btn1"><span id="choice1"></span></button>
             </div>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h2 id="modal-header">Modal Header</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p id="message">Some text in the Modal Body</p>
+                    </div>
+                </div>
+            </div>
             <hr>
             <footer>
                 <p id="progress">Question x of y</p>
+                <div id="progressBar">
+                    <div id="progressBarFull"></div>
+                </div>
             </footer>
-        </div>
-    </div>
-    <script src="game.js"></script>
+        </div>  
+        <script src="game.js"></script>
 </body>
 
 </html>

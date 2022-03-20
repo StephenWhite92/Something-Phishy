@@ -31,7 +31,7 @@ body {
 }
 
 hr {
-    margin-top: 50px;
+    margin-top: 30px;
     color: red;
     background-color: #ffc107;
     height: 2px;
@@ -42,7 +42,7 @@ hr {
 #score {
     color: black;
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .grid #question {
@@ -80,12 +80,82 @@ hr {
 #btn1:focus {
     outline: 0;
 }
+    
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #ffc107;
+    color: black;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 #progress {
     color: black;
     font-size: 18px;
 }
 .MUimage {
+    width: 250px;
+    height: 65px;
     max-width: 100%;
     max-height: auto;
+}
+
+#progressBar {
+    width: 20rem;
+    height: 3.4rem;
+    border: 0.3rem solid black;
+    border-radius: 30px;
+}
+
+#progressBarFull {
+    height: 3.4rem;
+    background-color: #ffc107;
+    width: 0%;
+    border-radius: 25px;
 }
