@@ -66,7 +66,7 @@ hr {
     font-size: 20px;
     color: #fff;
     border: none;
-    margin: 10px 20px 10px 0px;
+    margin: 10px;
 
 }
 
@@ -147,7 +147,7 @@ hr {
 }
 
 #progressBar {
-    width: 20rem;
+    width: 16rem;
     height: 3.4rem;
     border: 0.3rem solid black;
     border-radius: 30px;
