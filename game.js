@@ -60,7 +60,8 @@ function showScores() {
     span.onclick = function() {
         modal.style.display = "none";
         var gameOverHTML = "<h1>GREAT JOB!</h1>";
-        gameOverHTML += "<h2 id='score'> Your score: " + quiz.score + "</h2>";
+        gameOverHTML += "<h2 id='score'>Now we would like you to take a small survey.</h2>";
+        gameOverHTML += '<div class="contents"><a href="/survey.html" class="button">Continue</a></div>';
         var element = document.getElementById("quiz");
         element.innerHTML = gameOverHTML; 
     }   
