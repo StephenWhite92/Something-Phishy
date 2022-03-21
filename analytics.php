@@ -179,19 +179,45 @@ Capstone IT4970
             </tr>
             <tr>
                 <td>Male</td>
-                <td>example</td>
+                <td>
+                <?php include '/etc/capstone/database.php';
+                // DB Con
+                $mysqli = new mysqli($HOST,$USER,$DB_PSWD,$DB_NAME);
+                $sqlmale = "SELECT * FROM surveydata WHERE gender='Male'";
+                if ($resultmale = mysqli_query($mysqli, $sqlmale)){
+                    $rowcountmale = mysqli_num_rows( $resultmale );
+                    echo "$rowcountmale";
+                }
+                ?>
+                </td>
             </tr>
             <tr>
                 <td>Female</td>
-                <td>Example</td>
+                <td>
+                <?php include '/etc/capstone/database.php';
+                // DB Con
+                $mysqli = new mysqli($HOST,$USER,$DB_PSWD,$DB_NAME);
+                $sqlfemale = "SELECT * FROM surveydata WHERE gender='Female'";
+                if ($resultfemale = mysqli_query($mysqli, $sqlfemale)){
+                    $rowcountfemale = mysqli_num_rows( $resultfemale );
+                    echo "$rowcountfemale";
+                }
+                ?>
+                </td>
             </tr>
             <tr>
                 <td>Other</td>
-                <td>Example</td>
-            </tr>
-            <tr>
-                <td>Prefer not to answer</td>
-                <td>Example</td>
+                <td>
+                <?php include '/etc/capstone/database.php';
+                // DB Con
+                $mysqli = new mysqli($HOST,$USER,$DB_PSWD,$DB_NAME);
+                $sqlother = "SELECT * FROM surveydata WHERE gender='Other'";
+                if ($resultother = mysqli_query($mysqli, $sqlother)){
+                    $rowcountother = mysqli_num_rows( $resultother );
+                    echo "$rowcountother";
+                }
+                ?>
+                </td>
             </tr>
         </table>
     </div>
