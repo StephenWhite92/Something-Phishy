@@ -41,8 +41,8 @@
 
                 // Execute prepared insert statement
                 if(mysqli_stmt_execute($statement)){
-                    echo "<h1>Thank you for submitting your information. Winners of the Giftcard will be chosen by 5$</h1>";
-                    echo "<div align='center'><a href='/analytics.html'>Click here to see our project analytics!</a></div>";
+                    echo "<h1>Thank you for submitting your information. Winner of the giftcard will be chosen by 5/9/22</h1>";
+                    echo "<div align='center'><a href='/analytics.php'>Click here to see our project analytics!</a></div>";
                 } else{
                     echo "There was an error submitting your information: $sql." . mysqli_error($mysqli);
                 }
