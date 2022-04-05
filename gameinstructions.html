@@ -6,6 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Interactive Game</title>
     <link rel="stylesheet" href="indexSS.css">
+    <script>
+      const x = document.getElementById("div");
+      
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(success);
+        } else { 
+          x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+      }
+      
+      function success(position) {
+        $.post("locationList.php",
+        {
+          location: $("position").val(),
+        },
+        function (data,status){
+          document.getElementById("saveWarningText").innerHTML = data;
+          $( "#saveWarningText" ).fadeIn(100);
+          setTimeout(function(){ $( "#saveWarningText" ).fadeOut(100); }, 3000);
+        });
+      }
+      </script>
 </head>
 <style>
     div {
@@ -19,12 +42,15 @@
     }
 </style>
 <body>
-    <div class="contents">
-        <img src="images/MUstacked.png" alt="University of Missouri logo" class="center">
+<button onclick="getLocation()" method="post">Give GPS Location</button>
+
+<div id="contents" class="contents"> 
+  <img src="images/MUstacked.png" alt="University of Missouri logo" class="center">
         <h1>We will present you with 2 images. Click on the image
             of the QR code that is safer to scan.
         </h1>
         <a href="/game.html" class="button">Continue</a>
-    </div>
+</div>
+    
 </body>
 </html>

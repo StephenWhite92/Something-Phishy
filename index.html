@@ -9,7 +9,6 @@ Capstone IT4970
     <link rel="stylesheet" href="indexSS.css">
     <title>QR Code Game</title>
     <meta charset="utf-8">
-
 </head>
 
 <body>
@@ -25,14 +24,14 @@ Capstone IT4970
     </div>
 
     <div class="contents">
-        <form action="/index.php">
+        <form>
             <a href="/gameinstructions.html" class="button">Continue</a>
-            <input type="button" id="leaveButton" value="Leave Site" onclick="self.close()">
+            <a href="https://www.google.com" class="button">Leave Site</a>
         </form>
     </div>
 
     <div class="contents" id="note"> NOTE: When continuing to the training game, your browser will ask you to share your location.
-                This is a one time location request that will determine which QR code location you have accessed.
+                This is a one time location request that will determine which QR code location you scanned.
                 Your location will not be shared or given to any other organization.
     </div>
     
@@ -40,7 +39,7 @@ Capstone IT4970
 
 </html>
 
-<!---
+<!--
 function show_map(position) {
   var latitude = position.coords.latitude;
   var longitude = position.coords.longitude;
