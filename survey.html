@@ -11,11 +11,29 @@
             <form name="submitForm" action="surveysubmit.php" method="post" required>
                 <label class="required" for="age">Please enter your age:</label></br>
                 <input type="number" id="age" name="age" min="13" max="150" required></br></br>
-                <label class="required" for="gender">Select your gender:</label></br>
-                <select name="gender" required>
+                <label class="required" for="highesteducation">Highest Level of Education:</label></br>
+                <select name="highesteducation" required>
                     <option disabled selected value>------</option>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
+                    <option value="Lessthanhs">Did not complete High School</option>
+                    <option value="Hs">High School Diploma</option>
+                    <option value="Associate">Associates Degree</option>
+                    <option value="Bachelor">Bachelors Degree</option>
+                    <option value="Master">Masters Degree</option>
+                    <option value="Doctor">Doctorate Degree</option>
+                </select></br></br>
+                <label class="required" for="iteducation">Have you received any IT security training?:</label></br>
+                <select name="iteducation" required>
+                    <option disabled selected value>------</option>
+                    <option value="Noittraining">No IT training</option>
+                    <option value="Yesittraining">Have received some IT training</option>
+                </select></br></br>
+                <label class="required" for="qrlocation">Where do you scan QR codes most often?:</label></br>
+                <select name="qrlocation" required>
+                    <option disabled selected value>------</option>
+                    <option value="Resturant">Resturants</option>
+                    <option value="Retail">Retail stores</option>
+                    <option value="Physicaladvert">Physical Advertisements</option>
+                    <option value="Digitaladvert">Digital Advertisments</option>
                     <option value="Other">Other</option>
                 </select></br></br>
                 <label class="required" for="email">Enter your email:</label></br>
