@@ -19,15 +19,17 @@
             }
 
             // Insert statement
-            $sql = "INSERT INTO surveydata (age, gender, email, feedback) VALUES (?, ?, ?, ?)";
+            $sql = "INSERT INTO surveydata (age, highesteducation, iteducation, qrlocation, email, feedback) VALUES (?, ?, ?, ?, ?, ?)";
 
             // Prepare insert statement
             if($statement = mysqli_prepare($mysqli, $sql)){
-                mysqli_stmt_bind_param($statement, "isss", $age, $gender, $email, $feedback);
+                mysqli_stmt_bind_param($statement, "isssss", $age, $highesteducation, $iteducation, $qrlocation, $email, $feedback);
 
                 // Form parameters
                 $age = $_REQUEST['age'];
-                $gender = $_REQUEST['gender'];
+                $highesteducation = $_REQUEST['highesteducation'];
+                $iteducation = $_REQUEST['iteducation'];
+                $qrlocation = $_REQUEST['qrlocation'];
                 $email = $_REQUEST['email'];
                 $feedback = $_REQUEST['feedback'];
 
