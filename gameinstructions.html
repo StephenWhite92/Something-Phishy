@@ -28,6 +28,11 @@
           setTimeout(function(){ $( "#saveWarningText" ).fadeOut(100); }, 3000);
         });
       }
+        
+       function show () {
+		document.getElementById("contents").classList.remove("hidden");
+		document.getElementById("gpsbutton").classList.add("hidden");
+	  }
       </script>
 </head>
 <style>
@@ -40,11 +45,15 @@
         padding: 25px;
         margin-top: 200px;
     }
+    
+    .hidden {
+        display: none;
+    }
 </style>
 <body>
-<button onclick="getLocation()" method="post">Give GPS Location</button>
+<button id="gpsbutton" onclick="getLocation();show();" method="post">Give GPS Location</button>
 
-<div id="contents" class="contents"> 
+<div id="contents" class="hidden contents"> 
   <img src="images/MUstacked.png" alt="University of Missouri logo" class="center">
         <h1>We will present you with 2 images. Click on the image
             of the QR code that is safer to scan.
