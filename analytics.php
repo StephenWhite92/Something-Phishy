@@ -171,36 +171,194 @@ Capstone IT4970
     <br>
     <hr>
     <div class="contents">
-        <h3>Scanner Gender Analytics</h3>
+        <h3>Scanner Education Analytics</h3>
         <table>
             <tr>
-                <th>Scanner Gender</th>
+                <th>Scanner Highest Level of Education</th>
                 <th>Number of Scans</th>
             </tr>
             <tr>
-                <td>Male</td>
+                <td>Didn't Complete High School</td>
                 <td>
                 <?php include '/etc/capstone/database.php';
                 // DB Con
                 $mysqli = new mysqli($HOST,$USER,$DB_PSWD,$DB_NAME);
-                $sqlmale = "SELECT * FROM surveydata WHERE gender='Male'";
-                if ($resultmale = mysqli_query($mysqli, $sqlmale)){
-                    $rowcountmale = mysqli_num_rows( $resultmale );
-                    echo "$rowcountmale";
+                $sqlmale = "SELECT * FROM surveydata WHERE highesteducation='Lessthanhs'";
+                if ($resultlessthanhs = mysqli_query($mysqli, $sqllessthanhs)){
+                    $rowcountlessthanhs = mysqli_num_rows( $resultlessthanhs );
+                    echo "$rowcountlessthanhs";
                 }
                 ?>
                 </td>
             </tr>
             <tr>
-                <td>Female</td>
+                <td>High School Diploma</td>
                 <td>
                 <?php include '/etc/capstone/database.php';
                 // DB Con
                 $mysqli = new mysqli($HOST,$USER,$DB_PSWD,$DB_NAME);
-                $sqlfemale = "SELECT * FROM surveydata WHERE gender='Female'";
-                if ($resultfemale = mysqli_query($mysqli, $sqlfemale)){
-                    $rowcountfemale = mysqli_num_rows( $resultfemale );
-                    echo "$rowcountfemale";
+                $sqlhighschool = "SELECT * FROM surveydata WHERE highesteducation='Hs'";
+                if ($resulthighschool = mysqli_query($mysqli, $sqlhighschool)){
+                    $rowcounthighschool = mysqli_num_rows( $resulthighschool );
+                    echo "$rowcounthighschool";
+                }
+                ?>
+                </td>
+            </tr>
+            <tr>
+                <td>Associates Degree</td>
+                <td>
+                <?php include '/etc/capstone/database.php';
+                // DB Con
+                $mysqli = new mysqli($HOST,$USER,$DB_PSWD,$DB_NAME);
+                $sqlassociate = "SELECT * FROM surveydata WHERE highesteducation='Associate'";
+                if ($resultassociate = mysqli_query($mysqli, $sqlassociate)){
+                    $rowcountassociate = mysqli_num_rows( $resultassociate );
+                    echo "$rowcountassociate";
+                }
+                ?>
+                </td>
+            </tr>
+            <tr>
+                <td>Bachelors Degree</td>
+                <td>
+                <?php include '/etc/capstone/database.php';
+                // DB Con
+                $mysqli = new mysqli($HOST,$USER,$DB_PSWD,$DB_NAME);
+                $sqlbachelor = "SELECT * FROM surveydata WHERE highesteducation='Bachelor'";
+                if ($resultbachelor = mysqli_query($mysqli, $sqlbachelor)){
+                    $rowcountbachelor = mysqli_num_rows( $resultbachelor );
+                    echo "$rowcountlessthanhs";
+                }
+                ?>
+                </td>
+            </tr>
+            <tr>
+                <td>Masters Degree</td>
+                <td>
+                <?php include '/etc/capstone/database.php';
+                // DB Con
+                $mysqli = new mysqli($HOST,$USER,$DB_PSWD,$DB_NAME);
+                $sqlmaster = "SELECT * FROM surveydata WHERE highesteducation='Master'";
+                if ($resultmaster = mysqli_query($mysqli, $sqlmaster)){
+                    $rowcountmaster = mysqli_num_rows( $resultmaster );
+                    echo "$rowcountmaster";
+                }
+                ?>
+                </td>
+            </tr>
+            <tr>
+                <td>Docorate Degree</td>
+                <td>
+                <?php include '/etc/capstone/database.php';
+                // DB Con
+                $mysqli = new mysqli($HOST,$USER,$DB_PSWD,$DB_NAME);
+                $sqldoctor = "SELECT * FROM surveydata WHERE highesteducation='Doctor'";
+                if ($resultdoctor = mysqli_query($mysqli, $sqldoctor)){
+                    $rowcountdoctor = mysqli_num_rows( $resultdoctor );
+                    echo "$rowcountdoctor";
+                }
+                ?>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <tr>
+                <th>Scanner IT Education</th>
+                <th>Number of Scans</th>
+            </tr>
+            <tr>
+                <td>Received IT security training</td>
+                <td>
+                <?php include '/etc/capstone/database.php';
+                // DB Con
+                $mysqli = new mysqli($HOST,$USER,$DB_PSWD,$DB_NAME);
+                $sqlyesittraining = "SELECT * FROM surveydata WHERE iteducation='Yesittraining'";
+                if ($resultyesittraining = mysqli_query($mysqli, $sqlyesittraining)){
+                    $rowcountyesittraining = mysqli_num_rows( $resulyesittraining );
+                    echo "$rowcountyesittraining";
+                }
+                ?>
+                </td>
+            </tr>
+            <tr>
+                <td>Have not received IT security training</td>
+                <td>
+                <?php include '/etc/capstone/database.php';
+                // DB Con
+                $mysqli = new mysqli($HOST,$USER,$DB_PSWD,$DB_NAME);
+                $sqlnoittraining = "SELECT * FROM surveydata WHERE iteducation='Noittraining'";
+                if ($resultnoittraining = mysqli_query($mysqli, $sqlnoittraining)){
+                    $rowcountnoittraining = mysqli_num_rows( $resultnoittraining );
+                    echo "$rowcountnoittraining";
+                }
+                ?>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <hr>
+    <div class="contents">
+        <h3>Scanner Habit Analytics</h3>
+        <table>
+            <tr>
+                <th>Where QR scans usually takes place</th>
+                <th>Number of Scans</th>
+            </tr>
+            <tr>
+                <td>Resturants</td>
+                <td>
+                <?php include '/etc/capstone/database.php';
+                // DB Con
+                $mysqli = new mysqli($HOST,$USER,$DB_PSWD,$DB_NAME);
+                $sqlresturant = "SELECT * FROM surveydata WHERE qrlocation='Resturant'";
+                if ($resultresturant = mysqli_query($mysqli, $sqlresturant)){
+                    $rowcountresturant = mysqli_num_rows( $resultresturant );
+                    echo "$rowcountresturant";
+                }
+                ?>
+                </td>
+            </tr>
+            <tr>
+                <td>Retail stores</td>
+                <td>
+                <?php include '/etc/capstone/database.php';
+                // DB Con
+                $mysqli = new mysqli($HOST,$USER,$DB_PSWD,$DB_NAME);
+                $sqlretail = "SELECT * FROM surveydata WHERE qrlocation='Retail'";
+                if ($resultretail = mysqli_query($mysqli, $sqlretail)){
+                    $rowcountretail = mysqli_num_rows( $resultretail );
+                    echo "$rowcountretail";
+                }
+                ?>
+                </td>
+            </tr>
+            <tr>
+                <td>Physical Advertisments</td>
+                <td>
+                <?php include '/etc/capstone/database.php';
+                // DB Con
+                $mysqli = new mysqli($HOST,$USER,$DB_PSWD,$DB_NAME);
+                $sqlphysical = "SELECT * FROM surveydata WHERE qrlocation='Physicaladvert'";
+                if ($resultphysical = mysqli_query($mysqli, $sqlphysical)){
+                    $rowcountphysical = mysqli_num_rows( $resultphysical );
+                    echo "$rowcountphysical";
+                }
+                ?>
+                </td>
+            </tr>
+            <tr>
+                <td>Digital Advertisments</td>
+                <td>
+                <?php include '/etc/capstone/database.php';
+                // DB Con
+                $mysqli = new mysqli($HOST,$USER,$DB_PSWD,$DB_NAME);
+                $sqldigital = "SELECT * FROM surveydata WHERE qrlocation='Digitaladvert'";
+                if ($resultdigital = mysqli_query($mysqli, $sqldigital)){
+                    $rowcountdigital = mysqli_num_rows( $resultdigital );
+                    echo "$rowcountdigital";
                 }
                 ?>
                 </td>
@@ -211,7 +369,7 @@ Capstone IT4970
                 <?php include '/etc/capstone/database.php';
                 // DB Con
                 $mysqli = new mysqli($HOST,$USER,$DB_PSWD,$DB_NAME);
-                $sqlother = "SELECT * FROM surveydata WHERE gender='Other'";
+                $sqlother = "SELECT * FROM surveydata WHERE qrlocation='Other'";
                 if ($resultother = mysqli_query($mysqli, $sqlother)){
                     $rowcountother = mysqli_num_rows( $resultother );
                     echo "$rowcountother";
