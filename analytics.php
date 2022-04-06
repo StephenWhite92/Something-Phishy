@@ -183,7 +183,7 @@ Capstone IT4970
                 <?php include '/etc/capstone/database.php';
                 // DB Con
                 $mysqli = new mysqli($HOST,$USER,$DB_PSWD,$DB_NAME);
-                $sqlmale = "SELECT * FROM surveydata WHERE highesteducation='Lessthanhs'";
+                $sqllessthanhs = "SELECT * FROM surveydata WHERE highesteducation='Lessthanhs'";
                 if ($resultlessthanhs = mysqli_query($mysqli, $sqllessthanhs)){
                     $rowcountlessthanhs = mysqli_num_rows( $resultlessthanhs );
                     echo "$rowcountlessthanhs";
@@ -228,7 +228,7 @@ Capstone IT4970
                 $sqlbachelor = "SELECT * FROM surveydata WHERE highesteducation='Bachelor'";
                 if ($resultbachelor = mysqli_query($mysqli, $sqlbachelor)){
                     $rowcountbachelor = mysqli_num_rows( $resultbachelor );
-                    echo "$rowcountlessthanhs";
+                    echo "$rowcountbachelor";
                 }
                 ?>
                 </td>
@@ -276,7 +276,7 @@ Capstone IT4970
                 $mysqli = new mysqli($HOST,$USER,$DB_PSWD,$DB_NAME);
                 $sqlyesittraining = "SELECT * FROM surveydata WHERE iteducation='Yesittraining'";
                 if ($resultyesittraining = mysqli_query($mysqli, $sqlyesittraining)){
-                    $rowcountyesittraining = mysqli_num_rows( $resulyesittraining );
+                    $rowcountyesittraining = mysqli_num_rows( $resultyesittraining );
                     echo "$rowcountyesittraining";
                 }
                 ?>
