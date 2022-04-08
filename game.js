@@ -24,7 +24,19 @@ var images = {
     "rightTwo": "images/qr-code.png",
     "wrongTwo": "images/qr-code.png",
     "rightThree": "images/qr-code.png",
-    "wrongThree": "images/qr-code.png"
+    "wrongThree": "images/qr-code.png",
+    "rightfour": "",
+    "wrongfour": "",
+    "rightfive": "",
+    "wrongfive": "",
+    "rightsix": "",
+    "wrongsix": "",
+    "rightseven": "",
+    "wrongseven": "",
+    "righteight": "",
+    "wrongeight": ""
+
+
 }
 function populate() {
     if (quiz.isEnded()) {
@@ -76,9 +88,14 @@ function showScores() {
 
 // create questions
 var questions = [
-    new Question("Choose the right picture.", ["rightOne", "wrongOne"], "rightOne", "A flyer with a URL on it indicates that the QR code is more trust worthy. To be extra safe type in the URL instead", "You may have just infected your phone! Never trust QR code that doesn't have a URL with it on a random flyer in a public place."),
-    new Question("Choose the right picture.", ["rightTwo", "wrongTwo"], "rightTwo", " ", " "),
-    new Question("Choose the right picture.", ["rightThree", "wrongThree"], "rightThree"," "," "),
+    new Question("Choose the scenario that you would trust more.", ["rightOne", "wrongOne"], "rightOne", "A flyer with a URL on it indicates that the QR code is more trust worthy. To be extra safe type in the URL instead", "You may have just infected your phone! Never trust QR code that doesn't have a URL with it on a random flyer in a public place. A hacker could have just gained access to all of the contacts on your mobile device."),
+    new Question("Which of these flyers would you scan?", ["rightTwo", "wrongTwo"], "rightTwo", "Correct! This flyer has a generated and non altered QR code. ", "Incorrect. You can see that there has been a sticker attached over the previous QR code for this flyer. This could potentially lead you to a malicious site or contaminate your device with unwanted software or trackers. There is a lot of stored data on your phone, for example this could put all of your banking information at risk of being phished."),
+    new Question("", ["rightThree", "wrongThree"], "rightThree"," "," "),
+    new Question("", ["rightfour", "wrongfour"], "rightfour", " ", " " ),
+    new Question("", ["rightfive", "wrongfive"], "rightfive", " ", " " ),
+    new Question("", ["rightsix", "wrongsix"], "rightsix", " ", " " ),
+    new Question("", ["rightseven", "wrongseven"], "rightseven", " ", " " ),
+    new Question("", ["righteight", "wrongeight"], "righteight", " ", " " ),
 ];
 
 function Question(text, choices, answer, right, wrong) {
