@@ -4,12 +4,19 @@ var modal = document.getElementById("myModal");
 var header = document.getElementById("modal-header");
 // Get paragraph for text
 var message = document.getElementById("message");
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+// Get the continue button
+var cont = document.getElementsByClassName("button")[0];
 // Progress bar variable
 const progressBarFull = document.getElementById("progressBarFull");
 
-
+window.onload = function () {
+    modal.style.display = "block";
+    header.innerHTML = "How to play the game.";
+    message.innerHTML = "<h3>We will present you with 2 scenarios. Click on the scenario image that is a safer choice when scanning a QR code.</h3>";
+    cont.onclick = function() {
+        modal.style.display = "none";
+    }
+};
 
 var images = {
     "rightOne": "images/qr-code.png",
@@ -57,7 +64,7 @@ function showProgress() {
 function showScores() {
     modal.style.display = "block";
     header.innerHTML = "GREAT JOB!";
-    span.onclick = function() {
+    cont.onclick = function() {
         modal.style.display = "none";
         var gameOverHTML = "<h1>GREAT JOB!</h1>";
         gameOverHTML += "<h2 id='score'>Now we would like you to take a small survey.</h2>";
@@ -87,14 +94,14 @@ Question.prototype.isCorrectAnswer = function (choice) {
         modal.style.display = "block";
         header.innerHTML = "GREAT JOB!";
         message.innerHTML = quiz.getQuestionIndex().right;
-        span.onclick = function() {
+        cont.onclick = function() {
             modal.style.display = "none";
         }
     } else {
         modal.style.display = "block";
         header.innerHTML = "OH NO!";
         message.innerHTML = quiz.getQuestionIndex().wrong;
-        span.onclick = function() {
+        cont.onclick = function() {
             modal.style.display = "none";           
         }
     }
