@@ -19,14 +19,14 @@ window.onload = function () {
 };
 
 var images = {
-    "rightOne": "images/qr-code.png",
-    "wrongOne": "images/qr-code.png",
-    "rightTwo": "images/qr-code.png",
-    "wrongTwo": "images/qr-code.png",
-    "rightThree": "images/qr-code.png",
-    "wrongThree": "images/qr-code.png",
-    "rightfour": "",
-    "wrongfour": "",
+    "rightOne": "images/Q1A1.jpg",
+    "wrongOne": "images/Q1A2.jpg",
+    "rightTwo": "images/Q2A1.jpgg",
+    "wrongTwo": "images/Q2A2.jpg",
+    "rightThree": "",
+    "wrongThree": "",
+    "rightfour": "images/Q4A2.jpg",
+    "wrongfour": "images/Q4A1.jpg",
     "rightfive": "",
     "wrongfive": "",
     "rightsix": "",
@@ -88,11 +88,11 @@ function showScores() {
 
 // create questions
 var questions = [
-    new Question("Choose the scenario that you would trust more.", ["rightOne", "wrongOne"], "rightOne", "A flyer with a URL on it indicates that the QR code is more trust worthy. To be extra safe type in the URL instead", "You may have just infected your phone! Never trust QR code that doesn't have a URL with it on a random flyer in a public place. A hacker could have just gained access to all of the contacts on your mobile device."),
-    new Question("Which of these flyers would you scan?", ["rightTwo", "wrongTwo"], "rightTwo", "Correct! This flyer has a generated and non altered QR code. ", "Incorrect. You can see that there has been a sticker attached over the previous QR code for this flyer. This could potentially lead you to a malicious site or contaminate your device with unwanted software or trackers. There is a lot of stored data on your phone, for example this could put all of your banking information at risk of being phished."),
+    new Question("Which QR code seems safer to scan?", ["rightOne", "wrongOne"], "rightOne", "A flyer with a URL on it indicates that the QR code is more trust worthy. To be extra safe type in the URL instead", "You may have just infected your phone! Never trust QR code that doesn't have a URL with it on a random flyer in a public place. A hacker could have just gained access to all of the contacts on your mobile device."),
+    new Question("Look at the positioning of the QR code. Which one appears safer?", ["rightTwo", "wrongTwo"], "rightTwo", "Correct! This flyer has a generated and non altered QR code. The other flyer had been covered with a malicious QR sticker. ", "Incorrect. Notice how the QR code is not aligned correctly? This flyer had been 'hijacked' and could potentially lead you to a malicious site or contaminate your device with unwanted software or trackers. There is a lot of stored data on your phone, for example this could put all of your banking information at risk of being phished."),
     new Question("", ["rightThree", "wrongThree"], "rightThree"," "," "),
-    new Question("", ["rightfour", "wrongfour"], "rightfour", " ", " " ),
-    new Question("", ["rightfive", "wrongfive"], "rightfive", " ", " " ),
+    new Question("Make sure to note the URL when scanning QR codes. Which QR link looks safer?", ["rightfour", "wrongfour"], "rightfour", "Nice! Be wary of QR codes that take you to sites with URls similar to popular sites!", "Incorrect. Notice the mispelling on the mizzou.edu link? Make sure to pay attention to the URL that appears when you scan QR codes." ),
+    new Question("", ["rightfive", "wrongfive"], "rightfive", "", " " ),
     new Question("", ["rightsix", "wrongsix"], "rightsix", " ", " " ),
     new Question("", ["rightseven", "wrongseven"], "rightseven", " ", " " ),
     new Question("", ["righteight", "wrongeight"], "righteight", " ", " " ),
