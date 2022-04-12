@@ -21,7 +21,7 @@ window.onload = function () {
 var images = {
     "rightOne": "images/Q1A1.jpg",
     "wrongOne": "images/Q1A2.jpg",
-    "rightTwo": "images/Q2A1.jpgg",
+    "rightTwo": "images/Q2A1.jpg",
     "wrongTwo": "images/Q2A2.jpg",
     "rightThree": "",
     "wrongThree": "",
