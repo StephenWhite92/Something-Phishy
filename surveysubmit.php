@@ -9,6 +9,8 @@
         <section class="survey-body">
             <h1>Website Survey</h1>
             <?php include '/etc/capstone/database.php';
+            include '/etc/capstone/value.php';
+            
             // DB connection
             $mysqli = new mysqli($HOST,$USER,$DB_PSWD,$DB_NAME);
 
@@ -19,7 +21,7 @@
             }
 
             // Insert statement
-            $sql = "INSERT INTO surveydata (age, highesteducation, iteducation, qrlocation, email, feedback) VALUES (?, ?, ?, ?, ?, ?)";
+            $sql = "INSERT INTO surveydata (age, highesteducation, iteducation, qrlocation, email, feedback) VALUES (?, ?, ?, ?, AES_ENCRYPT(?, '$key'), ?)";
 
             // Prepare insert statement
             if($statement = mysqli_prepare($mysqli, $sql)){
@@ -34,7 +36,7 @@
                 $feedback = $_REQUEST['feedback'];
 
                 // Duplicate email check
-                $dupcheck = mysqli_query($mysqli, "SELECT * FROM surveydata WHERE email='$email'");
+                $dupcheck = mysqli_query($mysqli, "SELECT AES_DECRYPT(email, '$key') FROM surveydata WHERE email='$email'");
                 if(mysqli_num_rows($dupcheck) > 0){
                     echo "<h1>Email already submitted, please submit a unique email address!</h1>";
                     echo "<div align='center'><a href='/survey.html'>Click here to go back</a></div>";
