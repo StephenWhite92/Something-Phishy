@@ -13,7 +13,7 @@
 
     if (strlen($times) > 200000) {  $times = "";    }
 
-    $sql = "INSERT INTO locationlist (location);
+    $sql = "INSERT INTO locationlist (location)";
 
     if ($conn->query($sql) === TRUE) {
         echo "Page saved!";
