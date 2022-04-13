@@ -11,7 +11,7 @@ const progressBarFull = document.getElementById("progressBarFull");
 
 window.onload = function () {
     modal.style.display = "block";
-    header.innerHTML = "How to play the game.";
+    header.innerHTML = '<img src="images/important.png" class="important"><p>How to play the game.</p>';
     message.innerHTML = "<h3>We will present you with 2 scenarios. Click on the scenario image that is a safer choice when scanning a QR code.</h3>";
     cont.onclick = function() {
         modal.style.display = "none";
@@ -75,7 +75,8 @@ function showProgress() {
 
 function showScores() {
     modal.style.display = "block";
-    header.innerHTML = "GREAT JOB!";
+    header.innerHTML = '<img src="images/check.png" class="check">GREAT JOB!';
+    message.innerHTML = 'last right answer.';
     cont.onclick = function() {
         modal.style.display = "none";
         var gameOverHTML = "<h1>GREAT JOB!</h1>";
@@ -109,14 +110,14 @@ function Question(text, choices, answer, right, wrong) {
 Question.prototype.isCorrectAnswer = function (choice) {
     if(this.answer === choice) {
         modal.style.display = "block";
-        header.innerHTML = "GREAT JOB!";
+        header.innerHTML = '<img src="images/check.png" class="check">GREAT JOB!';
         message.innerHTML = quiz.getQuestionIndex().right;
         cont.onclick = function() {
             modal.style.display = "none";
         }
     } else {
         modal.style.display = "block";
-        header.innerHTML = "OH NO!";
+        header.innerHTML = '<img src="images/stop.png" class="stop">OH NO!';
         message.innerHTML = quiz.getQuestionIndex().wrong;
         cont.onclick = function() {
             modal.style.display = "none";           
