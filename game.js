@@ -74,9 +74,6 @@ function showProgress() {
 };
 
 function showScores() {
-    modal.style.display = "block";
-    header.innerHTML = '<img src="images/check.png" class="check">GREAT JOB!';
-    message.innerHTML = 'last right answer.';
     cont.onclick = function() {
         modal.style.display = "none";
         var gameOverHTML = "<h1>GREAT JOB!</h1>";
