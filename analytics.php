@@ -8,6 +8,7 @@ Capstone IT4970
     <head>
         <link rel="stylesheet" href="analyticsSS.css">
         <title>QR Code Analytics</title>
+        <link rel="icon" type="image/x-icon" href="/images/favicon.png">
         <meta charset="utf-8">
 
 </head>
