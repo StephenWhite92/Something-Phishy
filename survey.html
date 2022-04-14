@@ -3,6 +3,7 @@
     <head>
         <title>Survey</title>
         <link rel="stylesheet" href="surveySS.css">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.png">
     </head>
 
     <body>
