@@ -19,14 +19,14 @@ window.onload = function () {
 };
 
 var images = {
-    "rightOne": "images/Q1A1.jpg",
-    "wrongOne": "images/Q1A2.jpg",
-    "rightTwo": "images/Q2A1.jpg",
-    "wrongTwo": "images/Q2A2.jpg",
-    "rightThree": "images/Q3A2.png",
-    "wrongThree": "images/Q3A1.png",
-    "rightfour": "images/Q4A2.jpg",
-    "wrongfour": "images/Q4A1.jpg",
+    "rightOne": 'artwork/Q1A1.jpg" alt="picone' ,
+    "wrongOne": 'artwork/Q1A2.jpg" alt="pictwo',
+    "rightTwo": 'artwork/Q2A1.jpg" alt="piconeB',
+    "wrongTwo": 'artwork/Q2A2.jpg" alt="pictwoB',
+    "rightThree": "artwork/Q3A2.png",
+    "wrongThree": "artwork/Q3A1.png",
+    "rightfour": "artwork/Q4A2.jpg",
+    "wrongfour": "artwork/Q4A1.jpg",
     "rightfive": "",
     "wrongfive": "",
     "rightsix": "",
@@ -44,7 +44,9 @@ function populate() {
     } else {
         // show question
         var element = document.getElementById("question");
+        var scenario = document.getElementById("scenario");
         element.innerHTML = quiz.getQuestionIndex().text;
+        scenario.innerHTML = quiz.getQuestionIndex().scenario;
 
         // show options
         var choices = quiz.getQuestionIndex().choices;
@@ -86,18 +88,19 @@ function showScores() {
 
 // create questions
 var questions = [
-    new Question("Which QR code seems safer to scan?", ["rightOne", "wrongOne"], "rightOne", "A flyer with a URL on it indicates that the QR code is more trust worthy. To be extra safe type in the URL instead", "You may have just infected your phone! Never trust QR code that doesn't have a URL with it on a random flyer in a public place. A hacker could have just gained access to all of the contacts on your mobile device."),
-    new Question("Look at the positioning of the QR code. Which one appears safer?", ["rightTwo", "wrongTwo"], "rightTwo", "Correct! This flyer has a generated and non altered QR code. The other flyer had been covered with a malicious QR sticker. ", "Incorrect. Notice how the QR code is not aligned correctly? This flyer had been 'hijacked' and could potentially lead you to a malicious site or contaminate your device with unwanted software or trackers. There is a lot of stored data on your phone, for example this could put all of your banking information at risk of being phished."),
-    new Question("What type of QR code scanner is more secure? Apple or Kaspersky?", ["wrongThree", "rightThree"], "rightThree","Correct. Kaspersky QR scanner will check the scanned link is safe as well as scans to see if codes will open texts, images & more.<br>Click <a href=https://usa.kaspersky.com/qr-scanner#download-section>here</a> to download the scanner.","Incorrect. Apple's built in QR scanning is less secure. While it does show you the link, it does not scan it for potential malicous actions."),
-    new Question("Make sure to note the URL when scanning QR codes. Which QR link looks safer?", ["rightfour", "wrongfour"], "rightfour", "Nice! Be wary of QR codes that take you to sites with URLs similar to popular sites!", "Incorrect. Notice the mispelling on the mizzou.edu link? Make sure to pay attention to the URL that appears when you scan QR codes." ),
-    new Question("What QR seems to be located in a safer location?", ["wrongfive", "rightfive"], "rightfive", "Correct! QR Codes placed at public business counters are generally safe and place on purpose!", "Incorrect. QR codes placed in random public places are more likely to be malicious. If you don't have a purpose to scan a QR, dont!" ),
-    new Question("When asked to login to financial accounts, what should you use?", ["wrongsix", "rightsix"], "rightsix", "Correct. When accessing online financial sites, it is much safer to go to the site using a URL.", "Incorrect. QR codes should not be scanned to access financial websites. The QR could be malicious and initate money transfers to scammers, or worse, trick you into entering your login credentials on a fake website." ),
-    new Question("How should you download apps?", ["rightseven", "wrongseven"], "rightseven", "Correct. Never scan a QR code to download any form of software, visit the download page directly to ensure you are not being phished.", "Incorrect. Scanning a QR code to download software is a bad idea. You could be tricked into downloading malicious software that could steal login credentials or install malware." ),
-    new Question("Which QR overall seems safer?", ["righteight", "wrongeight"], "righteight", "Correct. This QR is located in a safe spot, has the URL provided, and appears more legitimate overall.", "Incorrect. This QR code is misaligned, does not have a URL with it, appears to be a phishing attempt, and seems overall too good to be true." ),
+    new Question("Which QR code seems safer to scan?","scenario 1", ["rightOne", "wrongOne"], "rightOne", "A flyer with a URL on it indicates that the QR code is more trust worthy. To be extra safe type in the URL instead", "You may have just infected your phone! Never trust QR code that doesn't have a URL with it on a random flyer in a public place. A hacker could have just gained access to all of the contacts on your mobile device."),
+    new Question("Look at the positioning of the QR code. Which one appears safer?","scenario 2", ["rightTwo", "wrongTwo"], "rightTwo", "Correct! This flyer has a generated and non altered QR code. The other flyer had been covered with a malicious QR sticker. ", "Incorrect. Notice how the QR code is not aligned correctly? This flyer had been 'hijacked' and could potentially lead you to a malicious site or contaminate your device with unwanted software or trackers. There is a lot of stored data on your phone, for example this could put all of your banking information at risk of being phished."),
+    new Question("What type of QR code scanner is more secure? Apple or Kaspersky?","scenario 3", ["wrongThree", "rightThree"], "rightThree","Correct. Kaspersky QR scanner will check the scanned link is safe as well as scans to see if codes will open texts, images & more.<br>Click <a href=https://usa.kaspersky.com/qr-scanner#download-section>here</a> to download the scanner.","Incorrect. Apple's built in QR scanning is less secure. While it does show you the link, it does not scan it for potential malicous actions."),
+    new Question("Make sure to note the URL when scanning QR codes. Which QR link looks safer?","scenario 4", ["rightfour", "wrongfour"], "rightfour", "Nice! Be wary of QR codes that take you to sites with URLs similar to popular sites!", "Incorrect. Notice the mispelling on the mizzou.edu link? Make sure to pay attention to the URL that appears when you scan QR codes." ),
+    new Question("What QR seems to be located in a safer location?","scenario 5", ["wrongfive", "rightfive"], "rightfive", "Correct! QR Codes placed at public business counters are generally safe and place on purpose!", "Incorrect. QR codes placed in random public places are more likely to be malicious. If you don't have a purpose to scan a QR, dont!" ),
+    new Question("When asked to login to financial accounts, what should you use?","scenario 6", ["wrongsix", "rightsix"], "rightsix", "Correct. When accessing online financial sites, it is much safer to go to the site using a URL.", "Incorrect. QR codes should not be scanned to access financial websites. The QR could be malicious and initate money transfers to scammers, or worse, trick you into entering your login credentials on a fake website." ),
+    new Question("How should you download apps?","scenario 7", ["rightseven", "wrongseven"], "rightseven", "Correct. Never scan a QR code to download any form of software, visit the download page directly to ensure you are not being phished.", "Incorrect. Scanning a QR code to download software is a bad idea. You could be tricked into downloading malicious software that could steal login credentials or install malware." ),
+    new Question("Which QR overall seems safer?","scenario 8", ["righteight", "wrongeight"], "righteight", "Correct. This QR is located in a safe spot, has the URL provided, and appears more legitimate overall.", "Incorrect. This QR code is misaligned, does not have a URL with it, appears to be a phishing attempt, and seems overall too good to be true." ),
 ];
 
-function Question(text, choices, answer, right, wrong) {
+function Question(text, scenario, choices, answer, right, wrong) {
     this.text = text;
+    this.scenario = scenario;
     this.choices = choices;
     this.answer = answer;
     this.right = right;
