@@ -19,20 +19,20 @@ window.onload = function () {
 };
 
 var images = {
-    "rightOne": 'artwork/Q1A1.jpg" alt="picone' ,
-    "wrongOne": 'artwork/Q1A2.jpg" alt="pictwo',
-    "rightTwo": 'artwork/Q2A1.jpg" alt="piconeB',
-    "wrongTwo": 'artwork/Q2A2.jpg" alt="pictwoB',
-    "rightThree": "artwork/Q3A2.png",
-    "wrongThree": "artwork/Q3A1.png",
-    "rightfour": "artwork/Q4A2.jpg",
-    "wrongfour": "artwork/Q4A1.jpg",
+    "rightOne": 'artwork/Q1A1.jpg" alt="Flyer with QR code and URL describing site.' ,
+    "wrongOne": 'artwork/Q1A2.jpg" alt="Flyer with QR code only.',
+    "rightTwo": 'artwork/Q2A1.jpg" alt="Flyer with non tampered with QR code.',
+    "wrongTwo": 'artwork/Q2A2.jpg" alt="Flyer with an off center/tampered with QR code.',
+    "rightThree": 'artwork/Q3A2.png" alt="Apple logo.',
+    "wrongThree": 'artwork/Q3A1.png" alt="Kaspersky',
+    "rightfour": 'artwork/Q4A2.jpg" alt="QR URL with correct spelling.',
+    "wrongfour": 'artwork/Q4A1.jpg" alt="QR URL with incorrect spelling.',
     "rightfive": "",
     "wrongfive": "",
     "rightsix": "",
     "wrongsix": "",
-    "rightseven": "artwork/Q7A2.png",
-    "wrongseven": "artwork/Q7A1.png",
+    "rightseven": 'artwork/Q7A2.png" alt="Pizza flyer with QR code to download app.',
+    "wrongseven": 'artwork/Q7A1.png" alt="Pizza flyer with app store links to download app.',
     "righteight": "",
     "wrongeight": ""
 
