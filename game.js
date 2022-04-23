@@ -31,8 +31,8 @@ var images = {
     "wrongfive": "",
     "rightsix": "",
     "wrongsix": "",
-    "rightseven": "",
-    "wrongseven": "",
+    "rightseven": "artwork/Q7A2.png",
+    "wrongseven": "artwork/Q7A1.png",
     "righteight": "",
     "wrongeight": ""
 
@@ -95,7 +95,7 @@ var questions = [
     new Question("What QR seems to be located in a safer location?","scenario 5", ["wrongfive", "rightfive"], "rightfive", "Correct! QR Codes placed at public business counters are generally safe and place on purpose!", "Incorrect. QR codes placed in random public places are more likely to be malicious. If you don't have a purpose to scan a QR, dont!" ),
     new Question("When asked to login to financial accounts, what should you use?","scenario 6", ["wrongsix", "rightsix"], "rightsix", "Correct. When accessing online financial sites, it is much safer to go to the site using a URL.", "Incorrect. QR codes should not be scanned to access financial websites. The QR could be malicious and initate money transfers to scammers, or worse, trick you into entering your login credentials on a fake website." ),
     new Question("How should you download apps?","scenario 7", ["rightseven", "wrongseven"], "rightseven", "Correct. Never scan a QR code to download any form of software, visit the download page directly to ensure you are not being phished.", "Incorrect. Scanning a QR code to download software is a bad idea. You could be tricked into downloading malicious software that could steal login credentials or install malware." ),
-    new Question("Which QR overall seems safer?","scenario 8", ["righteight", "wrongeight"], "righteight", "Correct. This QR is located in a safe spot, has the URL provided, and appears more legitimate overall.", "Incorrect. This QR code is misaligned, does not have a URL with it, appears to be a phishing attempt, and seems overall too good to be true." ),
+    new Question("Which QR overall seems safer?","scenario 8", ["wrongeight", "righteight"], "righteight", "Correct. This QR is located in a safe spot, has the URL provided, and appears more legitimate overall.", "Incorrect. This QR code is misaligned, does not have a URL with it, appears to be a phishing attempt, and seems overall too good to be true." ),
 ];
 
 function Question(text, scenario, choices, answer, right, wrong) {
