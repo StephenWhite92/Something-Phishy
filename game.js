@@ -34,7 +34,7 @@ var images = {
     "rightseven": 'artwork/Q7A2.png" alt="Pizza flyer with QR code to download app.',
     "wrongseven": 'artwork/Q7A1.png" alt="Pizza flyer with app store links to download app.',
     "righteight": 'artwork/Q8A1.png" alt="Flyer with QR code with URL provided, posted in an appropriate place.',
-    "wrongeight": 'artwork/A8A2.png" alt="Flyer with QR claiming a free Iphone giveaway located in a sketchy alley.'
+    "wrongeight": 'artwork/Q8A2.png" alt="Flyer with QR claiming a free Iphone giveaway located in a sketchy alley.'
 
 
 }
