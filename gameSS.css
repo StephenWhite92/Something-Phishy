@@ -150,6 +150,10 @@ hr {
     /* Black w/ opacity */
 }
 
+.modal-body {
+    text-align: center;
+}
+
 .modal-footer {
     display: flex;
     justify-content: center;
