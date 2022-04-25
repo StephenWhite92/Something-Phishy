@@ -81,10 +81,14 @@ hr {
 #scenario {
     display: flex;
     justify-content: center;
+    text-align: center;
     flex-wrap: wrap;
-    font-size: 20px;
+    font-size: 18px;
     color: black;
     border: 2px solid black;
+}
+#question {
+    text-align: center;
 }
 .grid #question {
     display: flex;
