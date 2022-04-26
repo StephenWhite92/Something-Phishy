@@ -49,7 +49,7 @@
                     echo "<h1>Thank you for submitting your information. Winner of the giftcard will be chosen by 5/9/22</h1>";
                     echo "<div align='center'><a href='/analytics.php'>Click here to see our project analytics!</a></div>";
                 } else{
-                    echo "Please enter a unique email address";
+                    echo "<h1>Email already submitted, please submit a unique email address!</h1>";
                     echo "<div align='center'><a href='/survey.html'>Click here to go back</a></div>";
                 }
             } else{
