@@ -16,52 +16,6 @@ Capstone IT4970
 <body>
     <div class="contents">
         <h1>QR Scan Analytics</h1>
-        <h3>Location Analytics</h3>
-        <p>Click <a href=locations.html>HERE</a> to see a full map of our QR code locations.</p>
-        <table>
-            <tr>
-                <th>Scan Location</th>
-                <th>Number of Scans</th>
-            </tr>
-            <tr>
-                <td>Example</td>
-                <td>Example</td>
-            </tr>
-            <tr>
-                <td>Example</td>
-                <td>Example</td>
-            </tr>
-        </table>
-    </div>
-    <br>
-    <hr>
-    <div class="contents">
-        <h3>Device Type Analytics</h3>
-        <table>
-            <tr>
-                <th>Scan Location</th>
-                <th>Number of Scans</th>
-            </tr>
-            <tr>
-                <td>iPhone</td>
-                <td>example</td>
-            </tr>
-            <tr>
-                <td>Android</td>
-                <td>Example</td>
-            </tr>
-            <tr>
-                <td>Desktop</td>
-                <td>Example</td>
-            </tr>
-            <tr>
-                <td>Other</td>
-                <td>Example</td>
-            </tr>
-        </table>
-    </div>
-    <br>
-    <hr>
     <div class="contents">
         <h3>Scanner Age Analytics</h3>
         <table>
